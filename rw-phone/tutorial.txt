@@ -1,5 +1,0 @@
--- Got Mail Trigger (Client Side)
-TriggerServerEvent("phone:server:sendNewMail", { sender = "Sender", subject = "Subject", message = "Message"})
-
--- Add police alert to police app (Server Side)
-TriggerClientEvent("phone:client:addPoliceAlert", -1, { title = "Test alert", coords = {x = coords.x, y = coords.y, z = coords.z}, description = 'Test description' })
