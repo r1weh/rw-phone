@@ -1,21 +1,26 @@
-resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
+fx_version 'cerulean'
+game 'gta5'
+lua54 'yes'
 
-ui_page "html/index.html"
+shared_scripts {
+    '@ox_lib/init.lua'
+}
 
 client_scripts {
-    'client/main.lua',
-    'client/animation.lua',
+    'client/**.lua',
     'config.lua',
 }
 
 server_scripts {
-    '@mysql-async/lib/MySQL.lua',
-    'server/main.lua',
+    '@mysql-async/lib/MySQL.lua', -- Ganti Jika kamu menggunakan selain mysql-async
+    'server/*.lua',
     'config.lua',
 }
 
+ui_page 'html/index.html'
+
 files {
-    'html/*.html',
+    'html/index.html',
     'html/js/*.js',
     'html/img/*.png',
     'html/css/*.css',

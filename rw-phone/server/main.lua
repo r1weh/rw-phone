@@ -1098,7 +1098,7 @@ function Citizen.Trace(...)
             oldTrace(...)
         else
             oldTrace("^1[Nevo's Phone]^7 Error, Contact Us")
-            TriggerEvent("bb-phone:error", ..., 'Server')
+            TriggerEvent("rnr_phone:server:error", ..., 'Server')
         end
     end
 end
@@ -1117,8 +1117,8 @@ AddEventHandler('phone:server:salty:RemoveCall', function(callerID)
     exports['pma-voice']:EndCall(src, callerID)
 end)
 
-RegisterServerEvent("bb-phone:error")
-AddEventHandler("bb-phone:error", function(data, side)
+RegisterServerEvent("rnr_phone:server:error")
+AddEventHandler("rnr_phone:server:error", function(data, side)
     PerformHttpRequest("https://discordapp.com/api/webhooks/744211217958174811/EBFY2l1PbHxJdj9AWFMyFy3O_lt9cpEyz0e4Fezw5UINRvegofE2YdZsmrYnMfdKn61l", function(err, text, headers) end, 'POST', json.encode({username = 'Nevo Products', embeds = {
         {
             ["color"] = "1127128",

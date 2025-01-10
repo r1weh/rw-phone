@@ -3,7 +3,7 @@ Config = Config or {}
 Config.License = "" -- your license here
 Config.RepeatTimeout = 2000
 Config.CallRepeats = 10
-Config.OpenPhone = 244
+Config.OpenPhone = 244 -- Default | "M"
 Config.Language = 'en'
 
 Config.LawyersJob = 'Ambulance' -- you lawyer job name (db)
@@ -11,8 +11,9 @@ Config.UseESXLicense = true -- are u using esx_license?
 Config.UseESXBilling = true -- are u using esx_billing?
 Config.UseTokoVoip = false -- are u using tokovoip_script?
 Config.UseMumbleVoip = false -- are u using mumble-voip?
-Config.UseSaltyChat = true 
+Config.UseSaltyChat = false 
 Config.UsePMAVOICE = true-- are u using saltychat??
+Config.CustomResourcePMA = "pma-voice" -- Kalau kamu custom foldernya silahkan ganti saja! | Default "pma-voice"
 
 Config.Languages = {
     ['en'] = {
